@@ -1,12 +1,17 @@
-const jobs = ["YOUTUBER", "SUBSYSTEM", "FRON-END", "FREELANCER"];
+const Family = ["Ossama", "Vina", "Chris", "Eliano"];
 const containerEl = document.querySelector(".container");
 console.log(containerEl);
 
-// containerEl.innerHTML = `I AM A ${}`;
-
 let num = 0;
-updateText();
+let y = 0;
 
 function updateText() {
-  containerEl.innerHTML = `<h1>I AM A ${jobs[num].slice(0)}</h1>`;
+  containerEl.innerHTML = `<h1>My name is ${Family[y].slice(0, num++)}</h1>`;
+  setTimeout(updateText, 300);
+  if (containerEl.innerHTML.slice(15, 15 + Family[y].length) === Family[y]) {
+    num = 0;
+    y++;
+  }
+  if (Family[y] === Family[Family.length]) y = 0;
 }
+updateText();
