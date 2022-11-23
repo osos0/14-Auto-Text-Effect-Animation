@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Syne+Mono&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: yellowgreen;
+  font-family: "Permanent Marker", cursive;
+  font-family: "Syne Mono", monospace;
+  font-size: 30px;
+  text-align: center;
+}
